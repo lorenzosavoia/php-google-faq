@@ -19,8 +19,12 @@ header{
 header ul li{
     list-style: none;
     margin-right: 1em;
-    margin-bottom: 1em;
+    padding-bottom: 1em;
     cursor: pointer;
+}
+.active{
+    color: #3367d5;
+    border-bottom: solid 2px #3367d5;
 }
 .image-box img{
     height: 25px;
