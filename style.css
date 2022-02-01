@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    margin-top: 1em;
+}
+.image-box img{
+    height: 50px;
+}
+.image-box h5{
+    font-size: 2em;
+    font-weight: 400;
+    color: #9a9595;
+}
