@@ -65,6 +65,7 @@ $faqs = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Google faq</title>
 </head>
@@ -73,16 +74,125 @@ $faqs = [
     <header class="container-fluid">
         <div class="row justify-content-between">
             <div class="col-4 ">
-                <div class="image-box d-flex align-items-center ">
-                    <img class="" src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
+                <div class="image-box d-flex align-items-center">
+                    <img class="me-1" src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
                     <h5>Privacy e termini</h5>
                 </div>
             </div>
-            <div class="col-3">ciao ciao</div>
+            <div class="col-3">
+                <div class="menu d-flex align-items-center justify-content-end">
+                    <i class="fas fa-bars"></i>
+                    <img class="avatar" src="https://preview.redd.it/dh5otp8kcf741.png?width=640&crop=smart&auto=webp&s=d795f12b5e3eea1ef4d7ceb8244fca98e2384dbf" alt="">
+                </div>
+            </div>
         </div>
-
-
+        <div class="row">
+            <div class="col-7">
+                <ul class="d-flex">
+                    <li>introduzione</li>
+                    <li>Norme sulla privacy</li>
+                    <li>Termini di servizio</li>
+                    <li>Tecnologie</li>
+                    <li>Domande frequenti</li>
+                </ul>
+            </div>
+        </div>
     </header>
+    <main class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <?php
+                foreach ($faqs as $element) {
+                ?>
+                    <div class="faq-box">
+                        <h1> <?= $element['question']; ?> </h1>
+                        <p><?= $element['answer']; ?></p>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <div class="row h-100 justify-content-center">
+            <div class="col-8 d-flex justify-content-between">
+                <ul class="text-google d-flex align-items-center">
+                    <li>Google</li>
+                    <li>Tutto su Google</li>
+                    <li>Privacy</li>
+                    <li>Termini</li>
+                </ul>
+                <div class="language-box d-flex align-items-center">
+                    <i class="fas fa-language"></i>
+                    <select name="language" id="" class="ms-2">
+                        <option value="af">Afrikaans</option>
+                        <option value="id">Bahasa Indonesia</option>
+                        <option value="ms">Bahasa Melayu</option>
+                        <option value="ca">Català</option>
+                        <option value="cs">Čeština</option>
+                        <option value="da">Dansk</option>
+                        <option value="de">Deutsch</option>
+                        <option value="et">Eesti</option>
+                        <option value="en">English</option>
+                        <option value="en-GB">English (United Kingdom)</option>
+                        <option value="es">Español</option>
+                        <option value="es-419">Español (Latinoamérica)</option>
+                        <option value="eu">Euskara</option>
+                        <option value="fil">Filipino</option>
+                        <option value="fr">Français</option>
+                        <option value="fr-CA">Français (Canada)</option>
+                        <option value="gl">Galego</option>
+                        <option value="hr">Hrvatski</option>
+                        <option value="zu">Isizulu</option>
+                        <option value="is">Íslenska</option>
+                        <option selected="" value="it">Italiano</option>
+                        <option value="sw">Kiswahili</option>
+                        <option value="lv">Latviešu</option>
+                        <option value="lt">Lietuvių</option>
+                        <option value="hu">Magyar</option>
+                        <option value="nl">Nederlands</option>
+                        <option value="no">Norsk</option>
+                        <option value="pl">Polski</option>
+                        <option value="pt-BR">Português (Brasil)</option>
+                        <option value="pt-PT">Português (Portugal)</option>
+                        <option value="ro">Română</option>
+                        <option value="sk">Slovenčina</option>
+                        <option value="sl">Slovenščina</option>
+                        <option value="sr-Latn">Srpski</option>
+                        <option value="fi">Suomi</option>
+                        <option value="sv">Svenska</option>
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="el">Ελληνικά</option>
+                        <option value="bg">Български</option>
+                        <option value="ru">Русский</option>
+                        <option value="sr">Српски</option>
+                        <option value="uk">Українська</option>
+                        <option value="iw">‫עברית‬</option>
+                        <option value="ur">‫اردو‬</option>
+                        <option value="ar">‫العربية‬</option>
+                        <option value="fa">‫فارسی‬</option>
+                        <option value="am">አማርኛ</option>
+                        <option value="mr">मराठी</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="bn">বাংলা</option>
+                        <option value="gu">ગુજરાતી</option>
+                        <option value="ta">தமிழ்</option>
+                        <option value="te">తెలుగు</option>
+                        <option value="kn">ಕನ್ನಡ</option>
+                        <option value="ml">മലയാളം</option>
+                        <option value="th">ไทย</option>
+                        <option value="ko">한국어</option>
+                        <option value="zh-HK">中文 (香港)</option>
+                        <option value="zh-CN">中文（简体中文）</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh-TW">中文（繁體中文）</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
